@@ -6,16 +6,39 @@
 //
 
 import SwiftUI
+import Combine
+
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    @ObservedObject var taskStore = TaskStore()
+    
+    
+    @State var newNewTask : String = ""
+    var searchBar : some View{
+        HStack{
+            TextField("Insert New Task", text : self.$newNewTask)
+            Button(action: self.addNewNewTask, label: {Text("Add New")})
         }
-        .padding()
+    }
+    
+    func addNewNewTask(){
+        taskStore.tasks
+            .append(Task(id:String(taskStore.tasks.count + 1), newTask: newNewTask))
+        
+        self.newNewTask = ""
+    }
+    
+    
+    var body: some View {
+        NavigationView{
+            VStack{
+                searchBar.padding()
+                List(self.taskStore.tasks){
+                    task in
+                    Text(task.newTask)
+                }.navigationTitle("To Do List")
+            }
+        }
     }
 }
 
