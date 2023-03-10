@@ -33,12 +33,23 @@ struct ContentView: View {
         NavigationView{
             VStack{
                 searchBar.padding()
-                List(self.taskStore.tasks){
-                    task in
-                    Text(task.newTask)
+                List{
+                    ForEach(self.taskStore.tasks){
+                        task in
+                        Text(task.newTask)
+                    }.onMove(perform: self.move)
+                        .onDelete(perform: self.deleteTasks)
+
                 }.navigationTitle("To Do List")
-            }
+            }.navigationBarItems(trailing: EditButton())
         }
+    }
+    func move (from source : IndexSet, to destination : Int){
+        taskStore.tasks.move(fromOffsets: source, toOffset: destination)
+    }
+    
+    func deleteTasks(at offsets : IndexSet){
+        taskStore.tasks.remove(atOffsets: offsets)
     }
 }
 

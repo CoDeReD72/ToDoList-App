@@ -1,5 +1,7 @@
 # Swift To-Do List App
 
-A first attempt of learning Swift with no experience of C/C+ before to try and expand and gain experiences in different languages and development proccesses.
+A Basic iOS To-Do list app as an introductory project into Swift and mobile development
 
-Inspired and aided by various tutorials
+This project has helped improve my logical thinking of mobile develpoment in addition to understanding of less familiar languages which would otherwise be difficult to get to grips with.
+
+Inspired by various discussions and tutorial videos to create this basic app.
