@@ -9,11 +9,19 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct Task : Identifiable{
-    var id = String()
-    var newTask = String()
+enum TaskPriority: String {
+    case red = "Urgent and important"
+    case orange = "Important"
+    case yellow = "Not urgent but important"
+    case green = "Low priority"
 }
 
-class TaskStore : ObservableObject{
+struct Task: Identifiable {
+    var id = UUID()
+    var newTask: String
+    var priority: TaskPriority
+}
+
+class TaskStore: ObservableObject {
     @Published var tasks = [Task]()
 }
