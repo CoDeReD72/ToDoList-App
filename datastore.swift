@@ -14,6 +14,8 @@ enum TaskPriority: String {
     case orange = "Important"
     case yellow = "Not urgent but important"
     case green = "Low priority"
+    case blue = "No Priority"
+    case purple = "Miscellaneous"
 }
 
 struct Task: Identifiable {

@@ -29,7 +29,9 @@ struct ContentView: View {
                     Text("Orange").tag(TaskPriority.orange)
                     Text("Yellow").tag(TaskPriority.yellow)
                     Text("Green").tag(TaskPriority.green)
-                }).pickerStyle(SegmentedPickerStyle()).fixedSize()
+                    Text("Blue").tag(TaskPriority.blue)
+                    Text("Purple").tag(TaskPriority.purple)
+                }).pickerStyle(SegmentedPickerStyle()).padding()
                 HStack{
                     searchBar.padding()
                 }
@@ -57,6 +59,10 @@ struct ContentView: View {
             return .yellow
         case .green:
             return .green
+        case .blue:
+            return .blue
+        case .purple:
+            return .purple
         }
     }
     
