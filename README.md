@@ -5,3 +5,10 @@ A Basic iOS To-Do list app as an introductory project into Swift and mobile deve
 This project has helped improve my logical thinking of mobile develpoment in addition to understanding of less familiar languages which would otherwise be difficult to get to grips with.
 
 Inspired by various discussions and tutorial videos to create this basic app.
+
+
+## Preview Images
+
+![imgs/plainView]
+
+![imgs/editView]
