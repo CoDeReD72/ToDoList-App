@@ -9,6 +9,6 @@ Inspired by various discussions and tutorial videos to create this basic app.
 
 ## Preview Images
 
-![imgs/plainView]
+![Plain View](imgs/plainView)
 
-![imgs/editView]
+![Edit View](imgs/editView)
